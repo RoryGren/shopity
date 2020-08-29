@@ -1,0 +1,12 @@
+{
+	"color":[0,1,0.87999993562698364,1],
+	"shoppingList":[
+		{"name":"Chicken stock","count":"","done":false},
+		{"name":"Salt","count":"","done":false},
+		{"name":"Zinc","count":"","done":false},
+		{"name":"Magnesium 500mg","count":"","done":false},
+		{"name":"dry dog food","count":"","done":false},
+		{"name":"tinned dog food","count":"","done":false},
+		{"name":"Vit c 1000mg","count":"","done":false}
+	]
+}

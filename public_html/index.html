@@ -4,9 +4,19 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<link rel="stylesheet" href="css/style.css" />
-		<title>Dev'Coffee PWA</title>
-		<link rel="manifest" href="manifest.json" />
+		<title>Shoppity</title>
+		<meta name="description" content="None">
+		<meta name="author" content="">
+
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" href="assets/css/style.css" />
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+		<link rel="manifest" href="./manifest.json" />
+
 		<!-- ios support -->
 		<link rel="apple-touch-icon" href="images/icons/icon-72x72.png" />
 		<link rel="apple-touch-icon" href="images/icons/icon-96x96.png" />
@@ -21,16 +31,83 @@
 	</head>
 	<body>
 		<main>
-			<nav>
-				<h1>Shopity</h1>
+			<header>
+				<div class="container">
+					<div>
+						<h2 id="status" data-type="header" class="display-4 status">Shoppity</h2>
+						<div class="input-group mb-3 mt-3 w-75 mx-auto"><input type="text" placeholder="Task Name" id="task" aria-label="task" aria-describedby="task" class="form-control form-control-lg" />
+							<div class="input-group-append"><button type="button" onClick="addItem()" id="additem" class="btn btn-success btn-lg">Add to List</button></div>
+						</div>
+					</div>
+				</div>
+			</header>
+			<div class="container">
+				<div class="card">
+					<!-- Card header -->
+					<div class="card-header">
+						<!-- Title -->
+						<h5 data-type="header" class="h3 mb-0">To do list</h5>
+					</div><!-- Card body -->
+					<div class="card-body p-0">
+						<!-- List group -->
+						<ul data-toggle="checklist" class="list-group list-group-flush todo-list">
+							<li class="checklist-entry list-group-item flex-column align-items-start py-4 px-4">
+								<div class="checklist-item checklist-item-success checklist-item-checked">
+									<div class="checklist-info">
+										<h5 data-type="header" class="checklist-title mb-0">Call with John</h5>
+									</div>
+									<div>
+										<div class="custom-control custom-checkbox custom-checkbox-success"><input id="chk-todo-task-1" type="checkbox" checked="" class="custom-control-input" /><label for="chk-todo-task-1"
+												class="custom-control-label"></label></div>
+									</div>
+								</div>
+							</li>
+							<li class="checklist-entry list-group-item flex-column align-items-start py-4 px-4">
+								<div class="checklist-item checklist-item-warning">
+									<div class="checklist-info">
+										<h5 data-type="header" class="checklist-title mb-0">Lunch meeting</h5>
+									</div>
+									<div>
+										<div class="custom-control custom-checkbox custom-checkbox-warning"><input id="chk-todo-task-2" type="checkbox" class="custom-control-input" /><label for="chk-todo-task-2"
+												class="custom-control-label"></label></div>
+									</div>
+								</div>
+							</li>
+							<li class="checklist-entry list-group-item flex-column align-items-start py-4 px-4">
+								<div class="checklist-item checklist-item-info">
+									<div class="checklist-info">
+										<h5 data-type="header" class="checklist-title mb-0">Micro SaaS Launch</h5>
+									</div>
+									<div>
+										<div class="custom-control custom-checkbox custom-checkbox-info"><input id="chk-todo-task-3" type="checkbox" class="custom-control-input" /><label for="chk-todo-task-3"
+												class="custom-control-label"></label></div>
+									</div>
+								</div>
+							</li>
+							<li class="checklist-entry list-group-item flex-column align-items-start py-4 px-4">
+								<div class="checklist-item checklist-item-danger checklist-item-checked">
+									<div class="checklist-info">
+										<h5 data-type="header" class="checklist-title mb-0">Python Hackaton</h5>
+									</div>
+									<div>
+										<div class="custom-control custom-checkbox custom-checkbox-danger"><input id="chk-todo-task-4" type="checkbox" checked="" class="custom-control-input" /><label for="chk-todo-task-4"
+												class="custom-control-label"></label></div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- <nav>
 				<ul>
 					<li>Home</li>
 					<li>About</li>
 					<li>Blog</li>
 				</ul>
-			</nav>
-			<div class="container"></div>
+			</nav> -->
+			<!-- <div class="container"></div> -->
 		</main>
-		<script src="js/app.js"></script>
+		<script src="assets/js/app.js"></script>
 	</body>
 </html>
